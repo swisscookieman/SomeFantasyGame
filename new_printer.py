@@ -44,6 +44,7 @@ def print_image(image_path, print_mode):
         print("Error:", e)
 
 
-# Example usage:
-image_path = "assets/items/archer_bow.png"
-print_image(image_path, "check")
+# We need to better this by making a function to do this vv
+image_paths = ["assets/items/archer_bow.png","assets/items/assasin_dagger.png","assets/items/mage_cape.png","assets/items/mage_staff.png","assets/items/mercenary_armor.png","assets/items/mercenary_axe.png","assets/items/warrior_chestplate.png","assets/items/warrior_sword.png"]
+for image in image_paths:
+    print_image(image)
