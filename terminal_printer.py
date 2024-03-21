@@ -3,7 +3,7 @@ from PIL import Image
 import numpy as np
 # converts the image to print in terminal
 # inform of ANSI Escape codes
-image_path = "assets/items/iron_sword.png"
+image_path = "assets/items/mercenary_armor.png"
 
 img = Image.open(image_path).convert('RGB').resize((16, 16))
 arr = np.array(img)
