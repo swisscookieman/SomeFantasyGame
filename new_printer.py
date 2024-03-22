@@ -2,7 +2,7 @@ from PIL import Image
 assets_dir = "assets/items/equipment"
 
 
-def print_image(image_path, print_mode, color_r="", color_g="", color_b=""):
+def print_image(image_path, print_mode="no_bg", color_r="", color_g="", color_b=""):
     try:
         # Open, resize image
         image = Image.open(image_path)
