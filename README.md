@@ -8,7 +8,7 @@ Description goes here.
 
 ## Contributions and issues
 
-## 
+## Idk we need to make this better
 
 
 https://alwore.itch.io/wizard-icon-set
