@@ -1,17 +1,17 @@
 ## First monster: Forest Witch
 
-![Witch Image](assets/monsters/forest_witch_big.png)
+![Witch Image](assets/monsters/forest_witch_md.png)
 
-### Drop table zero: guaranteed - always rolls
+### 100% table: guaranteed - always rolls
 
-| Item                      | ID             | Chance  |
-| ------------------------- | -------------- | ------- |
-| Small pouch of 20 Coins   | coins_small_50 | 80/100  |
-| Small pouch of 50 Coins   | coins_small_50 | 15/100  |
-| Small pouch of 100 Coins  | coins_small_50 | 4.9/100 |
-| Small pouch of 1000 Coins | coins_small_50 | 0.1/100 |
+| Item                      | ID               | Chance    |
+| ------------------------- | ---------------- | --------- |
+| Small pouch of 20 Coins   | coins_small_20   | 800/1000  |
+| Small pouch of 50 Coins   | coins_small_50   | 150/1000  |
+| Small pouch of 100 Coins  | coins_small_100  | 49/1000   |
+| Small pouch of 1000 Coins | coins_small_1000 | 01/1000   |
 
-### Drop table one: common items - always rolls
+### Common items - always rolls
 
 | Item           | ID             | Chance |
 | -------------- | -------------- | ------ |
@@ -21,7 +21,7 @@
 | Spider Eye     | spider_eye     | 5/100  |
 | Spider Bone    | spider_bone    | 5/100  |
 
-### Drop table two: rare items - 1/10 Chance to roll
+### Rare items - 1/10 Chance to roll
 
 | Item                | ID                  | Chance |
 | ------------------- | ------------------- | ------ |
@@ -30,7 +30,7 @@
 | Scroll of Thorns    | scroll_of_thorns    | 20/100 |
 | Scroll of Lifesteal | scroll_of_lifesteal | 5/100  |
 
-### Drop table three: relics - 1/50 Chance to roll
+### Relics - 1/50 Chance to roll
 
 | Item                 | ID                   | Chance |
 | -------------------- | -------------------- | ------ |
