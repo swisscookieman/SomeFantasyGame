@@ -1,7 +1,7 @@
 from PIL import Image
 
 
-def print_image(image_path, print_mode):
+def print_image(image_path, print_mode, color_r="", color_g="", color_b=""):
     try:
         image = Image.open(image_path)
         image = image.resize((16, 16))
@@ -38,13 +38,15 @@ def print_image(image_path, print_mode):
                         color_code = f"\033[38;2;{r};{g};{b}m"
                         print(color_code + "██", end="")
 
+                if print_mode == "custom":
+                    if r == g == b == 0:
+                        print(
+                            f"\033[38;2;{color_r};{color_g};{color_b}m" + "██", end="")
+                    else:
+                        color_code = f"\033[38;2;{r};{g};{b}m"
+                        print(color_code + "██", end="")
+
             print("\033[0m")
 
     except Exception as e:
         print("Error:", e)
-
-
-# We need to better this by making a function to do this vv
-image_paths = ["assets/items/archer_bow.png","assets/items/assasin_dagger.png","assets/items/mage_cape.png","assets/items/mage_staff.png","assets/items/mercenary_armor.png","assets/items/mercenary_axe.png","assets/items/warrior_chestplate.png","assets/items/warrior_sword.png"]
-for image in image_paths:
-    print_image(image)
