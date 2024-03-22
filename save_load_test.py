@@ -1,5 +1,5 @@
 import json
-import new_printer as printer
+import printer as printer
 
 
 def load_save(savepath):
@@ -8,7 +8,7 @@ def load_save(savepath):
 
     print(f"Player with name: {playersave['playername']}")
     print(
-        f"Is currently level: {playersave['level']} with {playersave['xp']} towards next level")
+        f"Is currently level: {playersave['level']} with {playersave['xp']}xp towards next level")
     print("Currently owns the following items: -----------------")
     print(playersave['owned_items']['archer_bow_00001'])
     '''for item in playersave['owned_items']:
