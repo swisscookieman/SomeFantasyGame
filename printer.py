@@ -53,13 +53,17 @@ def print_image(image_path, print_mode="no_bg", color_r="", color_g="", color_b=
     except Exception as e:
         print("Error:", e)
 
+
 def images_list(initial_dir):
     image_paths = []
     for image in initial_dir:
         image_paths.append(image)
     return image_paths
 
+
 image_paths = images_list(assets_dir)
 print(image_paths)
 # for image in image_paths:
 #     print_image(image)
+
+print_image("assets/items/default_txt.png")
