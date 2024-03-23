@@ -1,3 +1,17 @@
+import time
+import animation
+
+
+rare_drop = ['\033[96m  R', '  RA', '  RAR', '  RARE', '  RARE D', '  RARE DR', '  RARE DRO', '  RARE DROP',
+             '<<RARE DROP>>', '  RARE DROP  ', '<<RARE DROP>>', '  RARE DROP  ', '<<RARE DROP>>', '  RARE DROP  ', '<<RARE DROP>>']
+
+ultra_rare_drop = ['\033[95mULTRA', '      RARE',
+                   '           DROP', '                      ', 'ULTRA RARE DROP', '                      ', 'ULTRA RARE DROP', '                      ', 'ULTRA RARE DROP', '                      ', 'ULTRA RARE DROP']
+
+relic_drop = ["\033[93mR L C  R P", " E I  D O ", "R L C  R P",
+              " E I  D O ", "R         ", "RE        ", "REL       ", "RELI      ", "RELIC     ", "RELIC D   ", "RELIC DR  ", "RELIC DRO ", "RELIC DROP", "          ", "RELIC DROP", "          ", "RELIC DROP", "          ", "RELIC DROP"]
+
+
 def print_game_title():
     print("|-------------------------------------------------------------------------|")
     print("|  _____               _____         _               _____                |")
@@ -36,3 +50,25 @@ def print_crafting_title():
     print("|  \___|_| \__,_|_|  \__|_|_||_\__, | |")
     print("|                               |___/ |")
     print("|-------------------------------------|")
+
+
+def play_rare_drop():
+    rare_animation = animation.Wait(rare_drop, 0.05)
+    rare_animation.start()
+    time.sleep(4)
+    rare_animation.stop()
+
+
+def play_ultrarare_drop():
+    ultrarare_animation = animation.Wait(ultra_rare_drop, 0.05)
+    ultrarare_animation.start()
+    time.sleep(2.9)
+    ultrarare_animation.stop()
+
+
+def play_relic_drop():
+    relic_animation = animation.Wait(relic_drop, 0.05)
+    relic_animation.start()
+    time.sleep(5)
+    relic_animation.stop()
+
