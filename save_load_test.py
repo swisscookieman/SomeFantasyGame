@@ -1,5 +1,5 @@
 import json
-import framework as framework
+import image_printer as image_printer
 
 
 def load_save(savepath):
@@ -16,7 +16,7 @@ def load_save(savepath):
         print(
             f"Item is currently enchanted with {item_details['enchant1']}, {item_details['enchant2']}, {item_details['enchant3']}")
         imagedir = "assets/items/equipment/" + item_details['itemid'] + ".png"
-        framework.print_image(imagedir)
+        image_printer.print_image(imagedir)
 
 
 load_save("local/save.json")
