@@ -36,9 +36,3 @@ def print_crafting_title():
     print("|  \___|_| \__,_|_|  \__|_|_||_\__, | |")
     print("|                               |___/ |")
     print("|-------------------------------------|")
-
-
-print_crafting_title()
-print_game_title()
-print_inventory_title()
-print_monsters_title()
