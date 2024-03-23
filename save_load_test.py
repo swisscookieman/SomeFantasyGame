@@ -1,23 +1,22 @@
 import json
-import printer as printer
+import framework as framework
 
 
 def load_save(savepath):
     f = open(savepath)
     playersave = json.load(f)
 
-    print(f"Player with name: {playersave['playername']}")
-    print(
-        f"Is currently level: {playersave['level']} with {playersave['xp']}xp towards next level")
-    print("Currently owns the following items: -----------------")
-    print(playersave['owned_items']['archer_bow_00001'])
-    '''for item in playersave['owned_items']:
+    print(f"\n{playersave['playername']} currently is level: {playersave['level']} with {playersave['xp']}xp towards next level\n")
+    print("Currently owns the following items:")
+    for item in playersave['owned_items']:
+        print("\n----------------------------------------------------------------------\n")
+        item_details = playersave['owned_items'][item]
         print(
-            f"Quantity {item.amount} of {item.itemname} with id {item.itemid} in rarity \033[92m{item.rarity}\033[0m")
+            f"{item_details['amount']} {item_details['itemname']} with id {item_details['itemid']} of rarity \033[92m{item_details['rarity']}\033[0m")
         print(
-            f"Item is currently enchanted with the enchants {item.enchant1}, {item.enchant2}, {item.enchant3}")
-        imagedir = "assets/items/"+item.itemid+".png"
-        printer.print_image(imagedir, "no_bg")'''
+            f"Item is currently enchanted with {item_details['enchant1']}, {item_details['enchant2']}, {item_details['enchant3']}")
+        imagedir = "assets/items/equipment/" + item_details['itemid'] + ".png"
+        framework.print_image(imagedir)
 
 
 load_save("local/save.json")

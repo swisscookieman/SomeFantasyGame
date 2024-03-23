@@ -1,6 +1,11 @@
+# Imports
 from PIL import Image
-assets_dir = "assets/items/equipment"
+import os
 
+# Not framework yet, more like bordel for now
+
+# Variables init
+assets_dir = "assets/items/equipment/"
 
 def print_image(image_path, print_mode="no_bg", color_r="", color_g="", color_b=""):
     try:
@@ -53,13 +58,11 @@ def print_image(image_path, print_mode="no_bg", color_r="", color_g="", color_b=
     except Exception as e:
         print("Error:", e)
 
-def images_list(initial_dir):
-    image_paths = []
-    for image in initial_dir:
-        image_paths.append(image)
-    return image_paths
+    print("")
 
-image_paths = images_list(assets_dir)
-print(image_paths)
-# for image in image_paths:
-#     print_image(image)
+def list_images(directory):
+    image_paths = []
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            image_paths.append(str(os.path.join(root, file)))
+    return image_paths
