@@ -18,8 +18,19 @@ def doc_item(id):
         print("Common")
     if itemdata["rarity_tier"] == "rare":
         print(pu.Colors.rare + "Rare" + pu.Colors.reset)
+    if itemdata["rarity_tier"] == "fabled":
+        print(pu.Colors.fabled + "Fabled" + pu.Colors.reset)
     print("----------------------------------------")
     print(itemdata["description"])
+    print("----------------------------------------")
+    print("Statistics")
+    item_stats = itemdata["stats"]
+    if item_stats["defence"] != 0:
+        print(
+            f"{pu.Colors.defence}+{item_stats['defence']} ❈ Defence{pu.Colors.reset}")
+    if item_stats["health"] != 0:
+        print(
+            f"{pu.Colors.health}+{item_stats['health']} ❤ Health{pu.Colors.reset}")
 
 
-doc_item("archer_bow")
+doc_item("coat_of_arms_shield")

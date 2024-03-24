@@ -85,3 +85,6 @@ class Colors:  # Please add all important colors :)
     warning_yellow = '\033[93m'
     green = '\033[92m'
     rare = '\033[96m'
+    fabled = '\033[95m'
+    defence = '\033[92m'
+    health = '\033[91m'
