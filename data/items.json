@@ -1,0 +1,8 @@
+{
+    "archer_bow" : {
+        "itemname" : "Archer Bow",
+        "itemid" : "archer_bow",
+        "rarity" : "1/10",
+        "quality" : "basic"
+    }
+}
