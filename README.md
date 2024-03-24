@@ -4,7 +4,8 @@ Description goes here.
 
 ## To Do
 
-- [ ] Redo save_handler.py
+- [ ] Redo save_handler.py - *in progress*
+- [ ] Level system with graduing exp requirements
 
 ## Goal / help / roadmap / whatever
 
