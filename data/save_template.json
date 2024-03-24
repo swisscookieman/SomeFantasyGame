@@ -1,8 +1,6 @@
 {
-    "playername" : "Player",
-    "level" : 1,
-    "xp" : 0,
-    "owned_items": {
-        
-    }
+    "playername": "Player",
+    "level": 1,
+    "xp": 0,
+    "owned_items": {}
 }

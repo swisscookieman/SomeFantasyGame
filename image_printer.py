@@ -67,4 +67,4 @@ def list_images(directory):
             image_paths.append(str(os.path.join(root, file)))
     return image_paths
 
-print_image("assets/items/default_txt.png")
+#print_image("assets/items/default_txt.png")
