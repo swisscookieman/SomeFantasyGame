@@ -1,5 +1,6 @@
-import time
 import animation
+import time
+import os
 
 
 rare_drop = ['\033[96m  R', '  RA', '  RAR', '  RARE', '  RARE D', '  RARE DR', '  RARE DRO', '  RARE DROP',
@@ -72,3 +73,5 @@ def play_relic_drop():
     time.sleep(5)
     relic_animation.stop()
 
+def clear_terminal():
+    os.system("clear")
