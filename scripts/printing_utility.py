@@ -73,12 +73,15 @@ def play_relic_drop():
     time.sleep(5)
     relic_animation.stop()
 
+
 def clear_terminal():
     os.system("clear")
 
-class Colors: # Please add all important colors :)
+
+class Colors:  # Please add all important colors :)
     reset = '\033[0m'
     white_b = '\033[37;1m'
     input_blue = '\033[38;2;0;0;255m'
     warning_yellow = '\033[93m'
     green = '\033[92m'
+    rare = '\033[96m'

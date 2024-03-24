@@ -2,7 +2,9 @@
     "archer_bow" : {
         "itemname" : "Archer Bow",
         "itemid" : "archer_bow",
+        "rarity_tier" : "rare",
         "rarity" : "1/10",
-        "quality" : "basic"
+        "file" : "/equipment/archer_bow.png",
+        "description" : "A sturdy bow. Has been used by archers for centuries, crafted by the Drachenheim Works."
     }
 }
