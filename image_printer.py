@@ -66,3 +66,5 @@ def list_images(directory):
         for file in files:
             image_paths.append(str(os.path.join(root, file)))
     return image_paths
+
+print_image("assets/items/default_txt.png")
