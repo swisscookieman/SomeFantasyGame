@@ -79,4 +79,6 @@ def clear_terminal():
 class Colors: # Please add all important colors :)
     reset = '\033[0m'
     white_b = '\033[37;1m'
-    input_blue = '\033[38;2;0;0;255'
+    input_blue = '\033[38;2;0;0;255m'
+    warning_yellow = '\033[93m'
+    green = '\033[92m'
