@@ -88,3 +88,31 @@ class Colors:  # Please add all important colors :)
     fabled = '\033[95m'
     defence = '\033[92m'
     health = '\033[91m'
+
+
+class Icons:
+    strenght = '❁'
+    defence = '❈'
+    health = '❤'
+    speed = '✦'
+    crit_chance = '☣'
+    luck = '☘'  # unused for now
+    star = '✯'
+    circle_star = '✪'
+    death = '☠'
+    warning = '⚠'
+    music = '♫'  # random ?
+    cross = '✖'
+    check = '✔'
+    arrow = '➜'
+    flag = '⚑'
+    dragon = '☬'
+    smiley = '☺'
+    circle = '⦾'
+    swords = '⚔'
+    explosion = '✷'
+    heat = '♨'
+    wave = 'ʬ'
+    heart_2 = '❣'
+    empty_star_4 = '✧'
+    defence_2 = '❂'
