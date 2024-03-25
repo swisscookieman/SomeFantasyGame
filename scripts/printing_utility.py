@@ -73,12 +73,59 @@ def play_relic_drop():
     time.sleep(5)
     relic_animation.stop()
 
+
 def clear_terminal():
     os.system("clear")
 
-class Colors: # Please add all important colors :)
+
+class Colors:  # Please add all important colors :)
     reset = '\033[0m'
     white_b = '\033[37;1m'
     input_blue = '\033[38;2;0;0;255m'
     warning_yellow = '\033[93m'
+    magic = '\033[38;2;0;0;255m'
     green = '\033[92m'
+    rare = '\033[96m'
+    fabled = '\033[95m'
+    defence = '\033[92m'
+    health = '\033[91m'
+    strenght = '\033[91m'
+    yellow = '\033[33m'
+    pink = '\033[35m'
+    stealth = '\033[38;5;18m'
+    accuracy = '\033[38;5;49m'
+    ranged = '\033[38;5;214m'
+    relic = '\033[38;5;214m'
+
+
+class Style:
+    reset = '\033[0m'
+    italic = '\033[3m'
+
+
+class Icons:
+    strenght = '❁'
+    defence = '❈'
+    health = '❤'
+    speed = '✦'
+    crit_chance = '☣'
+    luck = '☘'  # unused for now
+    star = '✯'
+    circle_star = '✪'
+    death = '☠'
+    warning = '⚠'
+    music = '♫'  # random ?
+    cross = '✖'
+    check = '✔'
+    arrow = '➜'
+    flag = '⚑'
+    dragon = '☬'
+    smiley = '☺'
+    circle = '⦾'
+    swords = '⚔'
+    explosion = '✷'
+    heat = '♨'
+    wave = 'ʬ'
+    heart_2 = '❣'
+    empty_star_4 = '✧'
+    defence_2 = '❂'
