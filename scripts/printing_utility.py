@@ -83,6 +83,7 @@ class Colors:  # Please add all important colors :)
     white_b = '\033[37;1m'
     input_blue = '\033[38;2;0;0;255m'
     warning_yellow = '\033[93m'
+    magic = '\033[38;2;0;0;255m'
     green = '\033[92m'
     rare = '\033[96m'
     fabled = '\033[95m'
@@ -93,6 +94,7 @@ class Colors:  # Please add all important colors :)
     pink = '\033[35m'
     stealth = '\033[38;5;18m'
     accuracy = '\033[38;5;49m'
+    ranged = '\033[38;5;214m'
 
 
 class Style:

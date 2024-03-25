@@ -5,7 +5,20 @@
         "rarity_tier" : "rare",
         "rarity" : "1/10", 
         "file" : "/equipment/archer_bow.png",
-        "description" : "A sturdy bow. Has been used by archers for centuries, crafted by the Drachenheim Works."
+        "description" : "A sturdy bow. Has been used by archers for centuries, crafted by the Drachenheim Works.",
+        "stats" : {
+            "health" : 0,
+            "strenght" : 0,
+            "magic_knowledge" : 0,
+            "archery" : 25,
+            "crit_chance" : 10,
+            "stealth" : 0,
+            "accuracy" : 100,
+            "speed" : 25,
+            "phy_resistance" : 0,
+            "magic_resistance" : 0,
+            "ranged_resistance" : 0
+        }
     },
     "coat_of_arms_shield" : {
         "itemname" : "Coat of Arms Shield",
