@@ -88,6 +88,16 @@ class Colors:  # Please add all important colors :)
     fabled = '\033[95m'
     defence = '\033[92m'
     health = '\033[91m'
+    strenght = '\033[91m'
+    yellow = '\033[33m'
+    pink = '\033[35m'
+    stealth = '\033[38;5;18m'
+    accuracy = '\033[38;5;49m'
+
+
+class Style:
+    reset = '\033[0m'
+    italic = '\033[3m'
 
 
 class Icons:

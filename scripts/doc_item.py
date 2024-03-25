@@ -25,12 +25,42 @@ def doc_item(id):
     print("----------------------------------------")
     print("Statistics")
     item_stats = itemdata["stats"]
-    if item_stats["defence"] != 0:
-        print(
-            f"{pu.Colors.defence}+{item_stats['defence']} ❈ Defence{pu.Colors.reset}")
+    print(f"{pu.Style.italic}Defensive Stats•{pu.Style.reset}")
     if item_stats["health"] != 0:
         print(
-            f"{pu.Colors.health}+{item_stats['health']} ❤ Health{pu.Colors.reset}")
+            f"{pu.Colors.health} +{item_stats['health']} {pu.Icons.health} Health{pu.Colors.reset}")
+    if item_stats["phy_resistance"] != 0:
+        print(
+            f"{pu.Colors.defence} +{item_stats['phy_resistance']} {pu.Icons.strenght} Physical Resistance{pu.Colors.reset}")
+    if item_stats["magic_resistance"] != 0:
+        print(
+            f"{pu.Colors.input_blue} +{item_stats['magic_resistance']} {pu.Icons.empty_star_4} Magic Resistance{pu.Colors.reset}")
+    if item_stats["ranged_resistance"] != 0:
+        print(
+            f"{pu.Colors.yellow} +{item_stats['ranged_resistance']} {pu.Icons.circle} Ranged Resistance{pu.Colors.reset}")
+    print(f"{pu.Style.italic}Offensive Stats•{pu.Style.reset}")
+    if item_stats["strenght"] != 0:
+        print(
+            f"{pu.Colors.green} +{item_stats['strenght']} {pu.Icons.strenght} Strenght{pu.Colors.reset}")
+    if item_stats["magic_knowledge"] != 0:
+        print(
+            f"{pu.Colors.input_blue} +{item_stats['magic_knowledge']} {pu.Icons.empty_star_4} Magic Knowledge{pu.Colors.reset}")
+    if item_stats["archery"] != 0:
+        print(
+            f"{pu.Colors.yellow} +{item_stats['archery']} {pu.Icons.circle} Archery{pu.Colors.reset}")
+    if item_stats["crit_chance"] != 0:
+        print(
+            f"{pu.Colors.pink} +{item_stats['crit_chance']} {pu.Icons.circle} Crit Chance{pu.Colors.reset}")
+    print(f"{pu.Style.italic}Movement Stats•{pu.Style.reset}")
+    if item_stats["speed"] != 0:
+        print(
+            f" +{item_stats['speed']} {pu.Icons.speed} Speed{pu.Colors.reset}")
+    if item_stats["stealth"] != 0:
+        print(
+            f"{pu.Colors.stealth} +{item_stats['stealth']} {pu.Icons.heat} Stealth{pu.Colors.reset}")
+    if item_stats["accuracy"] != 0:
+        print(
+            f"{pu.Colors.accuracy} +{item_stats['stealth']} {pu.Icons.explosion} Accuracy{pu.Colors.reset}")
 
 
 doc_item("coat_of_arms_shield")
