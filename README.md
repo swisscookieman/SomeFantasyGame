@@ -67,3 +67,5 @@ Autre: 🟩 Sovereign Material - uniquement pour des matériaux rares, type la p
 ## Idk we need to make this better
 
 https://alwore.itch.io/wizard-icon-set
+
+truc pour que leo oublie pas: compte le nbr de monstres, a la fin du farm ca run la loot tables x fois et donne le loot
