@@ -95,6 +95,7 @@ class Colors:  # Please add all important colors :)
     stealth = '\033[38;5;18m'
     accuracy = '\033[38;5;49m'
     ranged = '\033[38;5;214m'
+    relic = '\033[38;5;214m'
 
 
 class Style:

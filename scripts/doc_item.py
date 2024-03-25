@@ -20,6 +20,8 @@ def doc_item(id):
         print(pu.Colors.rare + "Rare" + pu.Colors.reset)
     if itemdata["rarity_tier"] == "fabled":
         print(pu.Colors.fabled + "Fabled" + pu.Colors.reset)
+    if itemdata["rarity_tier"] == "relic":
+        print(pu.Colors.relic + "Relic" + pu.Colors.reset)
     print("----------------------------------------")
     print(itemdata["description"])
     print("----------------------------------------")
@@ -67,5 +69,3 @@ def doc_item(id):
             f"{pu.Colors.accuracy} +{item_stats['accuracy']} {pu.Icons.explosion} Accuracy{pu.Colors.reset}")
     print("----------------------------------------")
 
-
-doc_item("archer_bow")
