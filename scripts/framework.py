@@ -1,5 +1,5 @@
-import scripts.printing_utility as pu
-import scripts.save_handler as save
+import printing_utility as pu
+import save_handler as save
 import time
 
 
