@@ -1,6 +1,6 @@
-import json
 import printing_utility as pu
 import image_printer as imp
+import json
 
 itemdata_path = "data/items.json"
 items_assets_path = "assets/items"
