@@ -31,7 +31,8 @@ def main_menu():
 
 
 class Level:
-    levelrequirements = [0, 1000, 2000, 3000, 400]
+    # replace this with a mathematical formula
+    levelrequirements = [0, 1000, 2000, 3000, 4000]
     level = 1
     xp = 0
 
