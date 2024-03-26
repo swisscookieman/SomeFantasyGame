@@ -4,7 +4,7 @@ Description goes here.
 
 ## To Do
 
-- [ ] Redo save_handler.py - *in progress*
+- [x] Redo save_handler.py - *done*
 - [ ] Level system with graduing exp requirements
 
 ## Goal / help / roadmap / whatever
@@ -24,7 +24,8 @@ Magic resistance (base 0 max 100) mag dmg reduction %
 Ranged resistance (base 0 max 100) mag dmg reduction %  
 crit chance (base 10 max 100) chance to x2 dmg
 
-tout increase dune manière ou d'une autre avec le lvl, mais plus ou moins selon la classe  
+tout increase dune manière ou d'une autre avec le lvl, mais plus ou moins selon la classe
+possibilité de choisir ou mettre ses points ?
 les equipments sont ce qui increase a fond
 
 l'idée serait que tu peux pas max tt en meme temps, i.e. si tu fais un build full stealth alors tu te fais quasi jamais hit mais tu fais base dmg, voire moins  
@@ -66,6 +67,6 @@ Autre: 🟩 Sovereign Material - uniquement pour des matériaux rares, type la p
 
 ## Idk we need to make this better
 
-https://alwore.itch.io/wizard-icon-set
+https://alwore.itch.io/wizard-icon-set ta tjrs besoin de ca ? Si non delete pls
 
 truc pour que leo oublie pas: compte le nbr de monstres, a la fin du farm ca run la loot tables x fois et donne le loot
