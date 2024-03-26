@@ -6,6 +6,7 @@ Description goes here.
 
 - [x] Redo save_handler.py - *done*
 - [ ] Level system with graduing exp requirements
+- [ ] Redo qte and puzzle **correctly**
 
 ## Goal / help / roadmap / whatever
 
