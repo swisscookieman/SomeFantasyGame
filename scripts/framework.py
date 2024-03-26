@@ -6,9 +6,9 @@ def start():
     pu.clear_terminal()
     pu.print_game_title()
     print("Welcome to SomeFantasyGame ! Would you like to load your save ?\n\n")
-    user_input = input(f"{pu.Colors.input_blue}[1]{pu.Colors.reset} - Load\n{pu.Colors.input_blue}[2]{pu.Colors.reset} - New Save\n{pu.Colors.white_b}Input - {pu.Colors.reset}")
+    user_input = input(f"{pu.Colors.input_blue}[1]{pu.Colors.reset} - New\n{pu.Colors.white_b}Input - {pu.Colors.reset}")
     pu.clear_terminal()
-    if user_input == "2":
+    if user_input == "1":
         save.new(save.savetemplate_path,save.save_path)
     print(f"{pu.Colors.warning_yellow}Starting game.{pu.Colors.reset}")
     time.sleep(0.25)
@@ -21,3 +21,6 @@ def start():
 def main_menu():
     pu.clear_terminal()
     pu.print_game_title()
+    data = save.get_data()
+    print(f"Welcome back {data['playername']}!")
+    user_input = str(input(f"{pu.Colors.input_blue}[1]{pu.Colors.reset} - Fight\n{pu.Colors.input_blue}[2]{pu.Colors.reset} - Inventory\n{pu.Colors.input_blue}[3]{pu.Colors.reset} - Craft\n{pu.Colors.input_blue}[4]{pu.Colors.reset} - Stats\n{pu.Colors.white_b}Input - {pu.Colors.reset}"))
