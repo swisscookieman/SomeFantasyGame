@@ -78,6 +78,22 @@ def clear_terminal():
     os.system("clear")
 
 
+def progressbar(current, goal, size=20):
+    # to do: handle when current is bigger than goal
+    toprint = "\033[37;1m["
+    percentage = current/goal
+    green = size*percentage
+    green = round(green)
+    black = size - green
+
+    for i in range(green):
+        toprint = toprint + "\033[92m|"
+    for i in range(black):
+        toprint = toprint + "\033[38;5;18m|"
+    toprint = toprint + "\033[37;1m]\033[0m"
+    print(toprint)
+
+
 class Colors:  # Please add all important colors :)
     reset = '\033[0m'
     white_b = '\033[37;1m'
