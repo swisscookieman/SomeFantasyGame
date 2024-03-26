@@ -1,3 +1,5 @@
+import random
+
 puzzles = {
     "2, 4, 6, 8, ____": "10",
     "10, 20, 30, 40, ____": "50",
@@ -39,22 +41,38 @@ puzzles = {
     "MEAT, TEAM, MATE, TAME, ____ (Hint: A type of fruit)": "DATE",
     "STAR, RATS, ARTS, TSAR, ____ (Hint: A type of planet)": "MARS",
     "LISTEN, SILENT, ENLIST, INLETS, ____ (Hint: A type of weather)": "TINSEL",
-    "If a rooster laid an egg on top of a barn, which way would it roll?": "Roosters don't lay eggs.",
     "A farmer has 17 sheep, and all but 9 die. How many are left?": "9",
     "How many months have 28 days?": "All",
     "If you’re running in a race and you pass the person in 2nd place, what place are you in?": "2nd",
-    "How can you lift an elephant with one hand?": "You can't, as elephants are too heavy for one hand.",
-    "If you have 3 apples and you take away 2, how many do you have?": "2",
+    "If you have 3 apples and you take away 2, how many do you have?": "1",
     "If you multiply me by any other number, the answer will always be the same. What am I?": "0",
     "What is the next number in the sequence: 1, 11, 21, 1211, 111221?": "312211",
-    "How many sides does a circle have?": "2 (inside and outside)",
-    "What is the value of π (pi) rounded to two decimal places?": "3.14",
-    "If a plane crashes on the border of the United States and Mexico, where do they bury the survivors?": "Survivors are not buried.",
+    "What is the value of π (pi) rounded to five decimal places?": "3.14159",
     "How many birthdays does the average person have?": "1",
-    "If an electric train is moving north at 100mph and the wind is blowing to the west at 10mph, which way does the smoke blow?": "Electric trains don't produce smoke.",
     "Moon + Night = _____": "Stars",
     "Rain + Umbrella = _____": "Dry",
     "Winter + Snow = _____": "Cold",
     "Book + Pages = _____": "Reading",
     "Ocean + Waves = _____": "Beach",
 }
+
+
+def ask_random_question():
+    global puzzles
+    # Select a random item from the dictionary
+    question, answer = random.choice(list(puzzles.items()))
+
+    # Print the question
+    print(question)
+
+    # Get the user's input
+    user_input = input("Your answer: ")
+
+    # Compare the user's input with the answer
+    if user_input.lower() == answer.lower():
+        return True
+    else:
+        return False
+
+
+print(ask_random_question())
