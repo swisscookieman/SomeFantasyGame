@@ -2,10 +2,11 @@ import scripts.framework as framework
 import traceback
 import logging
 import time
+import json
 
 
 def main():
-    framework.start()
+    data = framework.start()
     time.sleep(0.25)
     framework.main_menu()
     
