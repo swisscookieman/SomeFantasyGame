@@ -9,6 +9,7 @@ Description goes here.
 - [ ] Redo qte and puzzle **correctly**
 - [ ] Rewrite Level class
 - [ ] Make a function for choices
+- [ ] Define default inventory
 
 ## Goal / help / roadmap / whatever
 

@@ -20,7 +20,7 @@ def start():
     print(f"{pu.Colors.warning_yellow}Starting game...{pu.Colors.reset}")
 
 
-def main_menu():
+def main_menu(data):
     pu.clear_terminal()
     pu.print_game_title()
     data = save.get_data()
@@ -31,7 +31,7 @@ def main_menu():
         case "1":
             monsters_menu()
         case "2":
-            inventory_menu()
+            inventory_menu(data)
         case "3":
             crafting_menu()
         case "4":
@@ -44,9 +44,12 @@ def monsters_menu():
     print("Choose which Monsters you want to fight.")
 
 
-def inventory_menu():
+def inventory_menu(data):
     pu.clear_terminal()
     pu.print_inventory_title()
+    print(f"This is your inventory, you currently own {len(data['owned_items'])} items.\n")
+    for item in data['owned_items']:
+        print(f"{data['owned_items'][item]}") # need to make this clear
 
 
 def crafting_menu():
