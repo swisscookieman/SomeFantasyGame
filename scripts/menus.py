@@ -41,7 +41,7 @@ def main_menu(data):
 def monsters_menu():
     pu.clear_terminal()
     pu.print_monsters_title()
-    print("Choose which Monsters you want to fight.")
+    print("Where are you travelling ?")
 
 
 def inventory_menu(data):
