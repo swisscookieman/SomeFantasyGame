@@ -5,11 +5,13 @@ Description goes here.
 ## To Do
 
 - [x] Redo save_handler.py - *done*
-- [ ] Level system with graduing exp requirements
-- [ ] Redo qte and puzzle **correctly**
+- [x] Level system with graduing exp requirements
+- [ ] Redo qte and puzzle **correctly** (not spaghetti)
 - [ ] Rewrite Level class
-- [ ] Make a function for choices
+- [ ] Make a function for choices (optional, we'll see if we need it)
 - [ ] Define default inventory
+- [ ] Redo base stats and max stats
+- [ ] Do Shop and Stats menu title
 
 ## Goal / help / roadmap / whatever
 
