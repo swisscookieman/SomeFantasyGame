@@ -10,6 +10,7 @@ Description goes here.
 - [ ] Rewrite Level class
 - [ ] Make a function for choices (optional, we'll see if we need it)
 - [ ] Define default inventory
+- [ ] Revoir les stats de base + max
 
 ## Goal / help / roadmap / whatever
 
