@@ -10,7 +10,8 @@ Description goes here.
 - [ ] Rewrite Level class
 - [ ] Make a function for choices (optional, we'll see if we need it)
 - [ ] Define default inventory
-- [ ] Revoir les stats de base + max
+- [ ] Redo base stats and max stats
+- [ ] Do Shop and Stats menu title
 
 ## Goal / help / roadmap / whatever
 
