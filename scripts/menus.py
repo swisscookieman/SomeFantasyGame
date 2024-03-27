@@ -26,7 +26,7 @@ def main_menu(data):
     data = save.get_data()
     print(f"Welcome back {data['playername']}!\n")
     user_input = str(input(
-        f"{pu.Colors.input_blue}[1]{pu.Colors.reset} - Fight\n{pu.Colors.input_blue}[2]{pu.Colors.reset} - Inventory\n{pu.Colors.input_blue}[3]{pu.Colors.reset} - Craft\n{pu.Colors.input_blue}[4]{pu.Colors.reset} - Stats\n{pu.Colors.white_b}Input - {pu.Colors.reset}"))
+        f"{pu.Colors.input_blue}[1]{pu.Colors.reset} - Fight\n{pu.Colors.input_blue}[2]{pu.Colors.reset} - Inventory\n{pu.Colors.input_blue}[3]{pu.Colors.reset} - Craft\n{pu.Colors.input_blue}[4]{pu.Colors.reset} - Shop\n{pu.Colors.input_blue}[5]{pu.Colors.reset} - Stats\n{pu.Colors.white_b}Input - {pu.Colors.reset}"))
     match user_input:
         case "1":
             monsters_menu()
@@ -35,6 +35,8 @@ def main_menu(data):
         case "3":
             crafting_menu()
         case "4":
+            shop_menu()
+        case "5":
             stats_menu()
 
 
@@ -51,10 +53,14 @@ def inventory_menu(data):
     for item in data['owned_items']:
         print(f"{data['owned_items'][item]}") # need to make this clear
 
+def shop_menu():
+    pu.clear_terminal()
+    print("Shop menu goes here")
 
 def crafting_menu():
     pu.clear_terminal()
-    pu.print_crafting_title()
+    pu.print_crafting_title() # Will do this later, nothing to do here for now
+    print("Here you can craft materials into valuables")
 
 def stats_menu():
     pu.clear_terminal
