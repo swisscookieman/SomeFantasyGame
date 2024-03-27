@@ -25,8 +25,7 @@ def main_menu(data):
     pu.print_game_title()
     data = save.get_data()
     print(f"Welcome back {data['playername']}!\n")
-    user_input = str(input(
-        f"{pu.Colors.input_blue}[1]{pu.Colors.reset} - Fight\n{pu.Colors.input_blue}[2]{pu.Colors.reset} - Inventory\n{pu.Colors.input_blue}[3]{pu.Colors.reset} - Craft\n{pu.Colors.input_blue}[4]{pu.Colors.reset} - Shop\n{pu.Colors.input_blue}[5]{pu.Colors.reset} - Stats\n{pu.Colors.white_b}Input - {pu.Colors.reset}"))
+    user_input = str(input(f"{pu.Colors.input_blue}[1]{pu.Colors.reset} - Fight\n{pu.Colors.input_blue}[2]{pu.Colors.reset} - Inventory\n{pu.Colors.input_blue}[3]{pu.Colors.reset} - Craft\n{pu.Colors.input_blue}[4]{pu.Colors.reset} - Shop\n{pu.Colors.input_blue}[5]{pu.Colors.reset} - Stats\n{pu.Colors.white_b}Input - {pu.Colors.reset}"))
     match user_input:
         case "1":
             monsters_menu()
