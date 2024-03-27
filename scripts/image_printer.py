@@ -124,4 +124,4 @@ def list_images(directory):
     return image_paths
 
 
-print_scenary("assets/scenary/volcano.png")
+
