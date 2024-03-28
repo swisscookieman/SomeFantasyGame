@@ -10,7 +10,7 @@ def main():
     menus.start()
     time.sleep(0.25)
     menus.main_menu(data)
-    
+
 
 if __name__ == "__main__":
     try:

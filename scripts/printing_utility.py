@@ -317,14 +317,22 @@ def doc_item(id):
             f"{Colors.pink} +{item_stats['crit_chance']} {Icons.crit_chance} Crit Chance{Colors.reset}")
     print(f"{Style.italic}\n• Movement Stats •{Style.reset}")
     if item_stats["speed"] != 0:
-        print(
-            f" +{item_stats['speed']} {Icons.speed} Speed{Colors.reset}")
+        if item_stats["speed"] > 0:
+            print(
+                f" +{item_stats['speed']} {Icons.speed} Speed{Colors.reset}")
+        elif item_stats["speed"] < 0:
+            print(
+                f" {item_stats['speed']} {Icons.speed} Speed{Colors.reset}")
     if item_stats["stealth"] != 0:
         print(
             f"{Colors.stealth} +{item_stats['stealth']} {Icons.heat} Stealth{  Colors.reset}")
     if item_stats["accuracy"] != 0:
-        print(
-            f"{Colors.accuracy} +{item_stats['accuracy']} {Icons.explosion} Accuracy{Colors.reset}")
+        if item_stats["accuracy"] > 0:
+            print(
+                f"{Colors.accuracy} +{item_stats['accuracy']} {Icons.explosion} Accuracy{Colors.reset}")
+        if item_stats["accuracy"] < 0:
+            print(
+                f"{Colors.accuracy} {item_stats['accuracy']} {Icons.explosion} Accuracy{Colors.reset}")
     print("----------------------------------------")
 
 
@@ -390,4 +398,4 @@ def progressbar(current, goal, size=20):
     print(toprint)
 
 
-stats()
+doc_item("starter_sword")
