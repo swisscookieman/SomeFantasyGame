@@ -53,6 +53,25 @@ def print_crafting_title():
     print("|-------------------------------------|\n")
 
 
+def print_shop_title():
+    print("|---------------------|")
+    print("|  ___ _              |")
+    print("| / __| |_  ___ _ __  |")
+    print("| \__ \ ' \/ _ \ '_ \ |")
+    print("| |___/_||_\___/ .__/ |")
+    print("|              |_|    |")
+    print("|---------------------|")
+
+
+def print_stats_title():
+    print("|-----------------------|")
+    print("|  ___ _        _       |")
+    print("| / __| |_ __ _| |_ ___ |")
+    print("| \__ \  _/ _` |  _(_-< |")
+    print("| |___/\__\__,_|\__/__/ |")
+    print("|-----------------------|")
+
+
 def play_rare_drop():
     rare_animation = animation.Wait(rare_drop, 0.05)
     rare_animation.start()
