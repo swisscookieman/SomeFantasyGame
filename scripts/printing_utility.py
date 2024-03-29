@@ -15,6 +15,12 @@ relic_drop = ["\033[93mR L C  R P", " E I  D O ", "R L C  R P",
               " E I  D O ", "R         ", "RE        ", "REL       ", "RELI      ", "RELIC     ", "RELIC D   ", "RELIC DR  ", "RELIC DRO ", "RELIC DROP", "          ", "RELIC DROP", "          ", "RELIC DROP", "          ", "RELIC DROP"]
 
 
+itemdata_path = "data/items.json"
+items_assets_path = "assets/items"
+monsterdata_path = "data/monsters.json"
+lootdata_path = "data/loot_tables.json"
+
+
 class Colors:  # Please add all important colors :)
     reset = '\033[0m'
     white_b = '\033[37;1m'
@@ -260,10 +266,6 @@ def print_scenary(image_path, print_mode="no_bg", color_r="", color_g="", color_
     print("")
 
 
-itemdata_path = "data/items.json"
-items_assets_path = "assets/items"
-
-
 def doc_item(id):
     with open(itemdata_path, 'r') as source_file:
         source_data = json.load(source_file)
@@ -398,4 +400,29 @@ def progressbar(current, goal, size=20):
     print(toprint)
 
 
-doc_item("starter_sword")
+def id_to_text(text):
+    # Split the text by underscores
+    words = text.split('_')
+
+    # Capitalize the first letter of each word and convert the rest to lowercase
+    transformed_words = [word.capitalize() for word in words]
+
+    # Join the words with a space and return the result
+    return ' '.join(transformed_words)
+
+
+def print_loot_table(tablename):
+    with open(lootdata_path, 'r') as source_file:
+        source_data = json.load(source_file)
+    lootdata = source_data[tablename]
+    print(f"\nLoot Table : {id_to_text(tablename)}")
+    print("┏-------------------------------------┓")
+    for item in lootdata:
+        itemspaces = (24 - len(item))*" "
+        dropspaces = (4 - len(str(lootdata[item]))) * " "
+        print(
+            f"| {id_to_text(item)}{itemspaces} | {lootdata[item]}/1000{dropspaces}|")
+    print("┗-------------------------------------┛")
+
+
+print_loot_table("test_table")
