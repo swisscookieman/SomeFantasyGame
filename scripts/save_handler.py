@@ -26,7 +26,7 @@ def new(savetemplate_path, save_path):
     user_input = str(input("Name your character : "))
     with open(save_path, 'r') as file:
         data = json.load(file)
-    data["playername"] = user_input
+    data["playername"] = user_input.capitalize()
     with open(save_path, 'w') as file:
         json.dump(data, file, indent=4)
 

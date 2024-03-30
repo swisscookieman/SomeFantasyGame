@@ -3,12 +3,12 @@
     "level": 1,
     "xp": 0,
     "owned_items": {
-        "armor": {
-            "id": "armor",
+        "starter_armor": {
+            "id": "starter_armor",
             "is_equipped": "True"
         },
-        "weapon": {
-            "id": "weapon",
+        "starter_sword": {
+            "id": "starter_sword",
             "is_equipped": "True"
         }
     }

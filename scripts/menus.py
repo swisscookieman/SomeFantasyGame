@@ -49,8 +49,10 @@ def inventory_menu(data):
     pu.clear_terminal()
     pu.print_inventory_title()
     print(f"This is your inventory, you currently own {len(data['owned_items'])} items.\n")
+    item_stats = save.get_items_data()
     for item in data['owned_items']:
-        print(f"{data['owned_items'][item]['id']}") # need to make this clear
+        item_id = data['owned_items'][item]['id'] 
+        print(f"{item_stats[item_id]['itemname']}")
 
 def shop_menu():
     pu.clear_terminal()
