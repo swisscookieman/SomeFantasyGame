@@ -416,13 +416,22 @@ def print_loot_table(tablename):
         source_data = json.load(source_file)
     lootdata = source_data[tablename]
     print(f"\nLoot Table : {id_to_text(tablename)}")
-    print("┏-------------------------------------┓")
+    maxitemlen = 0
+    maxdroplen = 0
     for item in lootdata:
-        itemspaces = (24 - len(item))*" "
-        dropspaces = (4 - len(str(lootdata[item]))) * " "
+        if len(item) > maxitemlen:
+            maxitemlen = len(item)
+        if len(str(lootdata[item])) > maxdroplen:
+            maxdroplen = len(str(lootdata[item]))
+    top = f"┏-{maxitemlen*'-'}---{maxdroplen*'-'}------┓"
+    bottom = f"┗-{maxitemlen*'-'}---{maxdroplen*'-'}------┛"
+    print(top)
+    for item in lootdata:
+        itemspaces = (maxitemlen - len(item))*" "
+        dropspaces = (maxdroplen+1 - len(str(lootdata[item]))) * " "
         print(
             f"| {id_to_text(item)}{itemspaces} | {lootdata[item]}/1000{dropspaces}|")
-    print("┗-------------------------------------┛")
+    print(bottom)
 
 
 print_loot_table("test_table")
