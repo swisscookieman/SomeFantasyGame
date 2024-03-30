@@ -26,7 +26,7 @@
         "rarity_tier" : "fabled",
         "rarity" : "1/10",
         "file" : "/equipment/coat_of_arms_shield.png",
-        "description" : "A shield given only to the kingdom's best knights. Decorated with the royal coat of arms, wealding it is an honor, and a blessing, as it will never break.",
+        "description" : "A shield given only to the kingdom's best knights. Decorated with the royal coat of arms, wealding it is an honor and a blessing, as it will never break.",
         "stats" : {
             "health" : 100,
             "strenght" : 100,

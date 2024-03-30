@@ -6,7 +6,7 @@ import time
 
 
 def main():
-    data = save.get_data()
+    data = save.get_save_data()
     menus.start()
     time.sleep(0.25)
     menus.main_menu(data)

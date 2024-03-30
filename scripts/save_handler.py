@@ -21,17 +21,21 @@ def new(savetemplate_path, save_path):
         # If the save file already exists, overwrite it
         with open(save_path, 'w') as destination_file:
             json.dump(source_data, destination_file, indent=4)
-            print(f"{pu.Colors.warning_yellow}Save file updated: {save_path}{pu.Colors.reset}")
+            print(f"{pu.Colors.warning_yellow}New save file created: {save_path}{pu.Colors.reset}")
 
     user_input = str(input("Name your character : "))
     with open(save_path, 'r') as file:
         data = json.load(file)
-
     data["playername"] = user_input
     with open(save_path, 'w') as file:
         json.dump(data, file, indent=4)
 
-def get_data():
+def get_save_data():
     with open("data/local/save.json") as file:
+        data = json.load(file)
+    return data
+
+def get_items_data():
+    with open("data/items.json") as file:
         data = json.load(file)
     return data

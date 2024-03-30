@@ -2,5 +2,14 @@
     "playername": "Player",
     "level": 1,
     "xp": 0,
-    "owned_items": {}
+    "owned_items": {
+        "armor": {
+            "id": "armor",
+            "is_equipped": "True"
+        },
+        "weapon": {
+            "id": "weapon",
+            "is_equipped": "True"
+        }
+    }
 }

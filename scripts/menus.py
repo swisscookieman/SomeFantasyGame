@@ -23,7 +23,7 @@ def start():
 def main_menu(data):
     pu.clear_terminal()
     pu.print_game_title()
-    data = save.get_data()
+    data = save.get_save_data()
     print(f"Welcome back {data['playername']}!\n")
     user_input = str(input(f"{pu.Colors.input_blue}[1]{pu.Colors.reset} - Fight\n{pu.Colors.input_blue}[2]{pu.Colors.reset} - Inventory\n{pu.Colors.input_blue}[3]{pu.Colors.reset} - Craft\n{pu.Colors.input_blue}[4]{pu.Colors.reset} - Shop\n{pu.Colors.input_blue}[5]{pu.Colors.reset} - Stats\n{pu.Colors.white_b}Input - {pu.Colors.reset}"))
     match user_input:
@@ -50,7 +50,7 @@ def inventory_menu(data):
     pu.print_inventory_title()
     print(f"This is your inventory, you currently own {len(data['owned_items'])} items.\n")
     for item in data['owned_items']:
-        print(f"{data['owned_items'][item]}") # need to make this clear
+        print(f"{data['owned_items'][item]['id']}") # need to make this clear
 
 def shop_menu():
     pu.clear_terminal()
