@@ -23,7 +23,7 @@ Strenght (base 100 max 1000) increases physical damage
 Magic knowledge (base 100 max 1000) increases magic damage  
 Archery (base 100 max 1000) increases ranged dmg  
 Stealth (base 0 max 100) chance for enemy attack to miss  
-Accuracy (base 75 max 200) chance for attack to hit  
+Accuracy (base 80 max 200) chance for attack to hit  
 speed (base 100 max 1000) increases hits per sec  
 Physical resistance (base 0 max 100) phy damage reduction %  
 Magic resistance (base 0 max 100) mag dmg reduction %  
@@ -73,7 +73,7 @@ Autre: 🟩 Sovereign Material - uniquement pour des matériaux rares, type la p
 
 ## Idk we need to make this better
 
-- https://alwore.itch.io/wizard-icon-set ta tjrs besoin de ca ? Si non delete pls
+
 - [ANSI Colors](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797)
 
 truc pour que leo oublie pas: compte le nbr de monstres, a la fin du farm ca run la loot tables x fois et donne le loot

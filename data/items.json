@@ -40,5 +40,47 @@
             "magic_resistance" : 100,
             "ranged_resistance" : 100
         }
+    },
+    "starter_armor" : {
+        "itemname" : "Starter Armor",
+        "itemid" : "starter_armor",
+        "rarity_tier" : "common",
+        "rarity" : "1/10",
+        "file" : "/equipment/starter_armor.png",
+        "description" : "A basic but trusty armor for begginers, made of connected wood pieces. Resist ranged attacks very well, but quite heavy.",
+        "stats" : {
+            "health" : 0,
+            "strenght" : 0,
+            "magic_knowledge" : 0,
+            "archery" : 0,
+            "crit_chance" : 0,
+            "stealth" : 0,
+            "accuracy" : 0,
+            "speed" : -10,
+            "phy_resistance" : 15,
+            "magic_resistance" : 5,
+            "ranged_resistance" : 25
+        }
+    },
+    "starter_sword" : {
+        "itemname" : "Starter Sword",
+        "itemid" : "starter_sword",
+        "rarity_tier" : "common",
+        "rarity" : "1/10",
+        "file" : "/equipment/starter_sword.png",
+        "description" : "A worn down wooden sword. Still cuts quite well, but will miss some shots.",
+        "stats" : {
+            "health" : 0,
+            "strenght" : 25,
+            "magic_knowledge" : 0,
+            "archery" : 0,
+            "crit_chance" : 20,
+            "stealth" : 0,
+            "accuracy" : -20,
+            "speed" : 0,
+            "phy_resistance" : 0,
+            "magic_resistance" : 0,
+            "ranged_resistance" : 0
+        }
     }
 }
