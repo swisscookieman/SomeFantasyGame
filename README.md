@@ -4,14 +4,15 @@ Description goes here.
 
 ## To Do
 
-- [x] Redo save_handler.py - *done*
+- [x] Redo save*handler.py - \_done*
 - [x] Level system with graduing exp requirements
-- [ ] Redo qte and puzzle **correctly** (not spaghetti)
+- [x] Redo qte and puzzle **correctly** (not spaghetti)
 - [ ] Rewrite Level class
 - [ ] Make a function for choices (optional, we'll see if we need it)
 - [ ] Define default inventory
-- [ ] Redo base stats and max stats
-- [ ] Do Shop and Stats menu title
+- [ ] Redo base stats and max stats (why?)
+- [x] Do Shop and Stats menu title
+- [ ] Do function to calculate monsters killed / minute using 100 simulated kills and average time, and run_attack function
 
 ## Goal / help / roadmap / whatever
 
@@ -72,7 +73,6 @@ Autre: 🟩 Sovereign Material - uniquement pour des matériaux rares, type la p
 ## Contributions and issues
 
 ## Idk we need to make this better
-
 
 - [ANSI Colors](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797)
 
