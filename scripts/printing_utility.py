@@ -17,6 +17,7 @@ relic_drop = ["\033[93mR L C  R P", " E I  D O ", "R L C  R P",
 
 itemdata_path = "data/items.json"
 items_assets_path = "assets/items"
+monsters_assets_path = "assets/monsters/"
 monsterdata_path = "data/monsters.json"
 lootdata_path = "data/loot_tables.json"
 
@@ -39,6 +40,7 @@ class Colors:  # Please add all important colors :)
     accuracy = '\033[38;5;49m'
     ranged = '\033[38;5;214m'
     relic = '\033[38;5;214m'
+    darkgreen = '\033[38;5;28m'
 
 
 class Style:
@@ -161,13 +163,13 @@ def clear_terminal():
 def print_image(image_path, print_mode="no_bg", color_r="", color_g="", color_b=""):
     try:
         # Open, resize image
-        image = Image.open(image_path)
+        image = Image.open(open(image_path, 'rb')).convert('RGB')
         image = image.resize((16, 16))
         width, height = image.size
 
         for y in range(height):
             for x in range(width):
-                r, g, b, _ = image.getpixel((x, y))
+                r, g, b = image.getpixel((x, y))
 
                 # Print with a checkboard behing
                 if print_mode == "check":
@@ -215,13 +217,13 @@ def print_image(image_path, print_mode="no_bg", color_r="", color_g="", color_b=
 def print_scenary(image_path, print_mode="no_bg", color_r="", color_g="", color_b=""):
     try:
         # Open, resize image
-        image = Image.open(image_path)
+        image = Image.open(open(image_path, 'rb')).convert('RGB')
         image = image.resize((48, 16))
         width, height = image.size
 
         for y in range(height):
             for x in range(width):
-                r, g, b, _ = image.getpixel((x, y))
+                r, g, b = image.getpixel((x, y))
 
                 # Print with a checkboard behing
                 if print_mode == "check":
@@ -270,7 +272,7 @@ def doc_item(id):
     with open(itemdata_path, 'r') as source_file:
         source_data = json.load(source_file)
     itemdata = source_data[id]
-    print("\nDocumentation---------------------------")
+    print("\nItem Documentation--------------------")
     print_image(items_assets_path + itemdata["file"])
     print("----------------------------------------")
     print(itemdata["itemname"], end=" | ")
@@ -338,7 +340,7 @@ def doc_item(id):
     print("----------------------------------------")
 
 
-def stats():
+def print_stats():
     # stats loading code here
     health = 100
     phy_resistance = 100
@@ -401,13 +403,8 @@ def progressbar(current, goal, size=20):
 
 
 def id_to_text(text):
-    # Split the text by underscores
     words = text.split('_')
-
-    # Capitalize the first letter of each word and convert the rest to lowercase
     transformed_words = [word.capitalize() for word in words]
-
-    # Join the words with a space and return the result
     return ' '.join(transformed_words)
 
 
@@ -434,4 +431,49 @@ def print_loot_table(tablename):
     print(bottom)
 
 
-print_loot_table("test_table")
+def doc_monster(monstername):
+    with open(monsterdata_path, 'r') as source_file:
+        source_data = json.load(source_file)
+    monsterdata = source_data[monstername]
+    print("\nItem Documentation--------------------\n")
+    print_image(monsterdata["image_file"])
+    print("----------------------------------------")
+    print(monsterdata["name"], end=" | ")
+    if monsterdata["zone"] == "forest":
+        print(f"{Colors.darkgreen}The Forest{Colors.reset}")
+    print("----------------------------------------")
+    print(monsterdata["description"])
+    print("----------------------------------------")
+    print("\nStatistics---------------------------")
+    monsterdata = monsterdata["stats"]
+    print(f"{Style.italic}\n• Defensive Stats •{Style.reset}")
+    print(
+        f"{Colors.health} {monsterdata['health']} {Icons.health} Health{Colors.reset}")
+    print(
+        f"{Colors.defence} {monsterdata['phy_resistance']} {Icons.strenght} Physical Resistance{Colors.reset}")
+    print(
+        f"{Colors.magic} {monsterdata['magic_resistance']} {Icons.empty_star_4} Magic Resistance{Colors.reset}")
+    print(
+        f"{Colors.ranged} {monsterdata['ranged_resistance']} {Icons.circle} Ranged Resistance{Colors.reset}")
+
+    print(f"{Style.italic}\n• Offensive Stats •{Style.reset}")
+    print(
+        f"{Colors.green} {monsterdata['strenght']} {Icons.strenght} Strenght{Colors.reset}")
+    print(
+        f"{Colors.magic} {monsterdata['magic_knowledge']} {Icons.empty_star_4} Magic Knowledge{Colors.reset}")
+    print(
+        f"{Colors.ranged} {monsterdata['archery']} {Icons.circle} Archery{Colors.reset}")
+    print(
+        f"{Colors.pink} {monsterdata['crit_chance']} {Icons.crit_chance} Crit Chance{Colors.reset}")
+
+    print(f"{Style.italic}\n• Movement Stats •{Style.reset}")
+    print(
+        f" {monsterdata['speed']} {Icons.speed} Speed{Colors.reset}")
+    print(
+        f"{Colors.stealth} {monsterdata['stealth']} {Icons.heat} Stealth{  Colors.reset}")
+    print(
+        f"{Colors.accuracy} {monsterdata['accuracy']} {Icons.explosion} Accuracy{Colors.reset}")
+    print("----------------------------------------")
+
+
+doc_monster("forest_goblin")

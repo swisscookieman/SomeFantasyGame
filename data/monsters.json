@@ -1,5 +1,6 @@
 {
     "forest_goblin" : {
+        "name" : "Forest Goblin",
         "image_file" : "assets/monsters/forest_goblin.png",
         "zone": "forest",
         "description" : "This hard-skinned goblin will give you some trouble. Some say physical attacks really aren't the thing against him.",
