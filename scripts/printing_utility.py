@@ -2,7 +2,7 @@ import animation
 import time
 import os
 from PIL import Image
-
+import random
 import json
 
 rare_drop = ['\033[96m  R', '  RA', '  RAR', '  RARE', '  RARE D', '  RARE DR', '  RARE DRO', '  RARE DROP',
@@ -476,4 +476,61 @@ def doc_monster(monstername):
     print("----------------------------------------")
 
 
-doc_monster("forest_goblin")
+'''
+Max health (base 100 max 1000)
+Physical resistance (base 0 max 100) phy damage reduction %  
+Magic resistance (base 0 max 100) mag dmg reduction %  
+Ranged resistance (base 0 max 100) mag dmg reduction %    
+
+Strenght (base 100 max 1000) increases physical damage  
+Magic knowledge (base 100 max 1000) increases magic damage  
+Archery (base 100 max 1000) increases ranged dmg
+crit chance (base 10 max 100) chance to x2 dmg
+
+Stealth (base 0 max 100) chance for enemy attack to miss  
+Accuracy (base 80 max 200) chance for attack to hit  
+speed (base 100 max 1000) increases hits per sec  
+'''
+
+
+def run_attack(attackeraccuracy, attackerpowervalue, defenderresistancevalue, defenderstealth, attackercritchance):
+    multiplier = 1
+    # this calculates whether this attack will hit, and if 2 times (acc > 100)
+    if attackeraccuracy >= 100:
+        accuracyrandom = random.randint(101, 200)
+        if accuracyrandom > attackeraccuracy:
+            multiplier = 1
+            isaccurate = True
+        elif accuracyrandom <= attackeraccuracy:
+            multiplier = 2
+            isaccurate = True
+    elif attackeraccuracy < 100:
+        accuracyrandom = random.randint(1, 100)
+        if accuracyrandom > attackeraccuracy:
+            isaccurate = False
+        elif accuracyrandom <= attackeraccuracy:
+            isaccurate = True
+    # this calculates whether the attack will be dodged
+    stealthrandom = random.randint(1, 100)
+    if stealthrandom > defenderstealth:
+        willdodge = False
+    elif stealthrandom <= defenderstealth:
+        willdodge = True
+    # this calculates whether the attack will crit
+    critrandom = random.randint(1, 100)
+    if critrandom > attackercritchance:
+        multiplier = multiplier
+    if critrandom <= attackercritchance:
+        multiplier = multiplier*2
+    # this calculates damage dealt
+    dmg = (attackerpowervalue*((100-defenderresistancevalue)/100))
+    dmgaftermulti = dmg*multiplier
+    if isaccurate and not willdodge:
+        finaldmg = dmgaftermulti
+    else:
+        finaldmg = 0
+    print(
+        f"attack is accurate: {isaccurate}, attack dodged: {willdodge}, attack multiplier: x{multiplier}, attackdmg: {dmgaftermulti}, finalreturned dmg {finaldmg}")
+
+
+run_attack(100, 100, 20, 0, 100)
